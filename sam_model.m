@@ -1,4 +1,6 @@
 clear all; clc;
+fis  = readfis("controller.fis")
+
 % parameters
 caf  = 2.787e-4; % cornering stiffness of front tire
 car  = 2.787e-4; % cornering ... rear tire
