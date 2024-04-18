@@ -26,6 +26,7 @@ A = [a11, a12; a21, a22];
 B = [b11; b21];
 C = [1, 0; 0, 1];
 D = [0; 0];
+
 % put the state space equation into tranfer function form (output = tf * input) 
 [b,a]   = ss2tf(A,B,C,D); 
 v_lat   = tf(b(1,:), a);
@@ -36,4 +37,5 @@ b1 = b(1,:);
 b2 = b(2,:);
 
 % run the simulation
-sim("simulation.slx")
+out = sim("simulation.slx").simout.data;
+plot(out(1,:), out(2,:))
