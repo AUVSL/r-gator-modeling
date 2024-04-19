@@ -15,7 +15,7 @@ theta = pi/2; % steering angle, [radians]
 
 % get put equations of kimetmic motion into state space form
 a11 = -(car      +      caf)/(m *v_lon);
-a12 =  (car*lr   -   caf*lf)/(m *v_lon);
+a12 =  (car*lr   -   caf*lf)/(m *v_lon) - v_lon;
 a21 =  (car*lr   -   caf*lf)/(Iz*v_lon);
 a22 = -(car*lr^2 + caf*lf^2)/(Iz*v_lon);
 
